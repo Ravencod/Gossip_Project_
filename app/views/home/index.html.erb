@@ -1,0 +1,19 @@
+<h1 class="card-title"><u>Welcome to the Gossip Project</u><br><br></h1>
+<h2>Last freshly made gossips just for u : <br><br></h2>
+<div class="card-columns">
+  <% @gossips.each do |gossip| %>
+    <div class="card p-2">
+      <blockquote class="blockquote mb 1 card-body">
+      <p><%= gossip.content%></p>
+        <small class="text-muted">
+        <%= link_to "#{gossip.author}", gossip_path(gossip.id) %>
+        </small>
+      </blockquote>
+    </div>
+  <% end%>
+  <div class="card">
+    </div>
+  </div>
+</div>
+
+
